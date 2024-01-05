@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Account</title>
+    <style>
+      @media screen and (max-width: 600px) {
+            .container {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+            .form-group {
+                margin-right: 0; /* Remove margin for better spacing on small screens */
+                margin-bottom: 10px; /* Adjust spacing */
+            }
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group input[type="tel"],
+            .form-group input[type="date"],
+            .form-group select,
+            .form-group input[type="password"],
+            .form-group input[type="number"],
+            .form-group textarea,
+            .form-group button {
+                width: 100%; /* Make inputs and buttons full width */
+            }
+        }
+        body{
+            background-color:rgb(112, 188, 218);
+            color:rgb(64, 250, 234)
+        }
+        h1{
+            color: black;
+        }
+      .container {
+      width: 50%;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(106, 116, 126, 0.1);
+     }
+     .form-row {
+      display: flex;
+      justify-content:space-between;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="date"],
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }  
+    .form-group {
+      flex: 1;
+      margin-right: 30px; /* Space between form groups */
+    }
+    .radio-buttons{
+      display: flex;
+      align-items: center;
+      
+    }
+    .radio-buttons label{
+      margin-right: 10px ;
+      
+    }
+   .male-label {
+  color:black;
+}
+check-boxes label{
+  margin-left:50px ;
+}
+.Hobbies{
+  color: black;
+}
+
+ 
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Create Account</h1>
+        <div class="section">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="First name">First name*</label>
+                 <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="Last name">Last name</label>
+                 <input type="text" id="Last Name" name="firstName" placeholder="Enter your Last name" required>
+            </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Email">Email*</label>
+                 <input type="text" id="Email" name="firstName" placeholder="Enter your email" required>
+            </div>
+        </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="Password">Password*</label>
+                     <input type="text" id="Password" name="firstName" placeholder="Enter your Password" required>
+                </div>
+                
+                    <div class="form-group">
+                        <label for="Confirm Password">Confirm Password*</label>
+                         <input type="text" id="Password" name="firstName" placeholder="Enter your Password again" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="radio-buttons">
+                      <div class="gender-label">
+                        <label for="gender">Gender:</label>
+                        <div></div>
+                          <label for="male" class="gender-label male-label">Male</label>
+                            <input type="radio" id="male" name="gender" value="male" required class="male-label">
+                         <label for="female" class="gender-label male-label">Female</label>
+                            <input type="radio" id="female" name="gender" value="female" required class="male-label">
+                          </div>
+                </div>
+                <div class="check-boxes">
+                  <div class="check-boxes label">
+                    <label for="Hobbies">Hobbies:</label>
+                    <div>
+                      <label for="music" class="Hobbies">Music</label>
+                      <input type="checkbox" id="music" class="Hobbies">
+                      <label for="Sports" class="Hobbies">Sports</label>
+                      <input type="checkbox" id="Sports" class="Hobbies">
+                      <label for="Travel" class="Hobbies">Travel</label>
+                      <input type="checkbox" id="Travel" class="Hobbies">
+                      <label for="movie" class="Hobbies">movies</label>
+                      <input type="checkbox" id="movie" class="Hobbies">
+                      <label for="slepping" class="Hobbies">sleeping</label>
+                      <input type="checkbox" id="slepping" class="Hobbies">
+                    </div>
+                  </div>
+                </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <div>
+            <label for="sourceOfIncome">Source of Income:</label>
+          </div>
+<input list="incomeOptions" id="sourceOfIncome" name="sourceOfIncome">
+
+<datalist id="incomeOptions">
+  <option value="Employed">
+  <option value="Not Employed">
+    <option value="Not applicable">
+    
+</datalist>
+</div>
+<div class="form-group">
+<label for="incomeRange">Income Scaling:</label>
+<input type="range" id="incomeRange" name="incomeRange" min="0" max="100000" step="1000">
+<div id="incomeValueDisplay">20k</div>
+</div>
+        </div>
+<div class="form-row">
+  <div class="form-group">
+    <label for="profilepic">Upload Profile Picture:</label>
+    <input type="file" id="profilePic" name="profilePic" accept="image/*">
+
+  </div>
+  <div class="form-group">
+    <label for="number">Age</label>
+    <input type="number" id="number" name="name" min="0" max="100">
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-group">
+    <label for="bio">Bio</label>
+    <textarea id ="bio" name="name" rows="5" cols="90"></textarea>
+  </div>
+</div>
+<div class="form-row"></div>
+<div class="form-group">
+  <button type="button" style="text-align: right; background-color: aqua;">Create</button>
+</div>
+
+
+          
+
+          
+          
+        
+        
+        
+
+    </div>
+</body>
+</html>
